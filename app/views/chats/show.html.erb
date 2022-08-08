@@ -1,0 +1,13 @@
+<h1 id="room" data-room="<%= @room.id %>" data-user="<%= current_user.id %>">
+  <%= @user.name %> さんとのチャット
+</h1>
+
+<div class="message" style="width: 400px;">
+  <%= render 'index', chats: @chats %>
+</div>
+
+<div class="errors">
+  <%= render "layouts/errors", obj: @chat %>
+</div>
+
+<div class="chat-form"><%= render "form", chat: @chat, room: @room %></div>
